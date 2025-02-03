@@ -80,7 +80,4 @@ def server(input, output, session):
     
 app = App(app_ui, server)
 
-import nest_asyncio
-nest_asyncio.apply()
-
 app.run()
