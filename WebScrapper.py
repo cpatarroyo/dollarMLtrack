@@ -27,8 +27,8 @@ req = requests.get(read_url,headers)
 
 #HTML parsing to find the prices of the commodities reported (entry variables)
 indicatorSoup = BeautifulSoup(req.content, 'html.parser')
-nameInd = indicatorSoup.findAll('h3', class_=['nameIndicator','col-10 pl-10 nameIndicator'])
-priceInd = indicatorSoup.findAll(class_=['priceIndicator','price'])
+nameInd = indicatorSoup.find_all('h3', class_=['nameIndicator','col-10 pl-10 nameIndicator'])
+priceInd = indicatorSoup.find_all(class_=['priceIndicator','price'])
 
 for rem in [13,15,17]:
     del(priceInd[rem])
