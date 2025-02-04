@@ -57,7 +57,7 @@ curResults = {}
 for j in range(len(nameCur)):
     curResults[nameCur[j].getText()] = re.sub(r'[,]','.',re.sub(r'[^0-9,]','',priceCur[j].getText()))
 
-dbconnection = sqlite3.connect('/home/j304/Documents/Personal/python/cash.db')
+dbconnection = sqlite3.connect('/home/j304/Documents/Personal/python/dollarMLtrack/cash.db')
 cursor = dbconnection.cursor()
 
 ### Table creation ###
